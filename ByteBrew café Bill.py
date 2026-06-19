@@ -2,23 +2,24 @@ print("Welcome to ByteBrew café !")
 n=120
 print("-"*n)
 
-print("MENU \n")
+print("MENU")
+print("~"*4)
 
-print("Latte      - Rs 150")
+print("\nLatte      - Rs 150")
 print("Cappuccino - Rs 100")
 print("Mocha      - Rs 120")
 print("Macchiato  - Rs 200")
 
 print("-"*n)
 
-Menu = ["Latte" , "Cappuccino" , "Mocha" , "Macchiato" ]
+Menu = {"Latte" : 150 , "Cappuccino" : 100 , "Mocha": 120 , "Macchiato" : 200}
 order = input("ENTER ITEM NAME :")
 if order in Menu:
-        print("Order accepted")
+        amount = Menu[order]
+        print("PRICE PER ITEM :", amount)
 else: exit(print("Sorry, Item not available"))
 
 quantity = int(input("ENTER QUANTITY :"))
-amount = float(input("ENTER PRICE PER ITEM :"))
 apply_discount = (input("APPLY DISCOUNT? (True/False) :"))
 
 
